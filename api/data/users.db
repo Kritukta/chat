@@ -1,0 +1,4 @@
+{"email":"kri-tukta@yandex.ru","password":"$2a$13$8mtrSyp70sFhPn/zcwSoLOj5sOxigeEyGZ6yFuqBZA31Xwg6JUsj.","avatar":"https://s.gravatar.com/avatar/0c8b879bd6520f4a5bb403cf8753ffed?s=200","_id":"8IARrz61jQ8K7wpq"}
+{"email":"test@yandex.ru","password":"$2a$13$idlgethu9kHNzaIfqvVubuslkCqS1soJYZTxzy4OToXtfn9vd4.va","avatar":"https://s.gravatar.com/avatar/c3b3fb33ecee99b86a24a017e2e0e9f1?s=200","_id":"XWpijfuquBYF9T7T"}
+{"email":"operator@mail.ru","password":"$2a$13$FGfGHiaNPXuwyQunjzNKkuEb/vzCjBZvc4xJrZtGBKF6CI5QXtRMC","avatar":"https://s.gravatar.com/avatar/2c0a64f2ac31e3bb0f0c63559af7bf9b?s=200","_id":"rIOvZOXhelAk5nvg"}
+{"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
