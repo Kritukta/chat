@@ -11,14 +11,20 @@ https://docs.feathersjs.com
 запуск фронт
 
 npm/yarn install
+
 quasar dev
 
 запуск бек
 
 cd api
+
+
 npm/yarn install
+
+
 npm run dev
 
 ```
-
 localhost:8080
+
+Если проблема при запуске бека - почистить содержимое api/data/messages.db и users.db
