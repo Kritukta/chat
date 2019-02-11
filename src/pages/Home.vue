@@ -7,9 +7,7 @@
             <div class="auto"><img src="~assets/quasar-logo.png"></div>
             <div class="auto">
               <h3>
-                </br>
                 <router-link to="/signin">Войти</router-link> или <router-link to="/register">Зарегистрироваться</router-link> в чате
-                </br></br>
               </h3>
             </div>
             <div class="auto"><img src="~assets/feathers-logo.png"></div>
@@ -33,24 +31,24 @@
 </template>
 
 <script>
-  export default {
-    props: ['user'],
-    data () {
-      return {
-      }
-    },
-    computed: {
-      authenticated () {
-        return this.user !== null
-      }
-    },
-    methods: {
-    },
-    mounted () {
-    },
-    beforeDestroy () {
+export default {
+  props: ['user'],
+  data () {
+    return {
     }
+  },
+  computed: {
+    authenticated () {
+      return this.user !== null
+    }
+  },
+  methods: {
+  },
+  mounted () {
+  },
+  beforeDestroy () {
   }
+}
 </script>
 
 <style lang="styl">

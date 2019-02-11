@@ -1,16 +1,15 @@
 import api from 'src/api'
-//import { Promise } from 'es6-promise'
+// import { Promise } from 'es6-promise'
 
 const auth = {
 
   user: null,
 
-  getUser() {
+  getUser () {
     return this.user
   },
 
   fetchUser (accessToken) {
-
     return api.passport.verifyJWT(accessToken)
       .then(payload => {
         return api.service('users').get(payload.userId)
@@ -22,18 +21,14 @@ const auth = {
 
   authenticate () {
     console.log('auth')
-
     return api.authenticate()
       .then((response) => {
         console.log('auth successful')
-
         return this.fetchUser(response.accessToken)
       })
       .then(user => {
         console.log('got user')
-
         this.user = user
-
         return Promise.resolve(user)
       })
       .catch((err) => {
@@ -66,7 +61,6 @@ const auth = {
   },
 
   onLogout (callback) {
-
     api.on('logout', () => {
       console.log('onLogout')
 
@@ -77,23 +71,22 @@ const auth = {
   },
 
   onAuthenticated (callback) {
-
     api.on('authenticated', response => {
       console.log('onAuthenticate', response)
 
       this.fetchUser(response.accessToken)
-      .then(user => {
-        console.log('onAuthenticate got user')
+        .then(user => {
+          console.log('onAuthenticate got user')
 
-        this.user = user
+          this.user = user
 
-        callback(this.user)
-      })
-      .catch((err) => {
-        console.log('onAuthenticate get user failed', err)
+          callback(this.user)
+        })
+        .catch((err) => {
+          console.log('onAuthenticate get user failed', err)
 
-        callback(this.user)
-      })
+          callback(this.user)
+        })
     })
   },
 

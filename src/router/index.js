@@ -21,14 +21,11 @@ const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes
 })
-
 router.beforeEach((to, from, next) => {
-
   if (!to.meta.requiresAuth || auth.authenticated()) {
     next()
   } else {
     console.log('Not authenticated')
-
     next({ path: '/home' })
   }
 })

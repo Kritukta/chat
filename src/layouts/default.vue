@@ -108,7 +108,7 @@ export default {
           this.$q.notify({type: 'positive', message: 'войдите еще раз'})
         })
         .catch(() => {
-            this.$q.notify({type: 'positive', message: 'не получилось зайти - попробуйте снова через 5 минут'})
+          this.$q.notify({type: 'positive', message: 'не получилось зайти - попробуйте снова через 5 минут'})
         })
     },
     setUser (user) {
@@ -118,14 +118,14 @@ export default {
   mounted () {
     // Check if there is already a session running
     auth.authenticate()
-    .then((user) => {
-      this.setUser(user)
-      this.$q.notify({type: 'positive', message: 'перезагрузка текущей сейсии'})
-    })
-    .catch(_ => {
-      this.setUser(null)
-      this.$router.push({ name: 'home' })
-    })
+      .then((user) => {
+        this.setUser(user)
+        this.$q.notify({type: 'positive', message: 'перезагрузка текущей сейсии'})
+      })
+      .catch(_ => {
+        this.setUser(null)
+        this.$router.push({ name: 'home' })
+      })
 
     // On successful login
     auth.onAuthenticated((user) => {
